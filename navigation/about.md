@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-About Me: Jowan ELzein
+Name: Jowan Elzein
 
 **Born**: Fort Lewis, Washington State
 - I'm a millitary child and have lived in 6 places in and out of the US
