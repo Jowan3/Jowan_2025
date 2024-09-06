@@ -13,6 +13,6 @@ About Me: Jowan ELzein
 - I moved to San Diego when I was 7 and have been loving it here
 - I'm the middle child of a family of five one younger brother and an older sister
 - I plan to go to college and study game design 
-- My hobbies are playing videogames, drawing, and cooking
+- My hobbies are playing videogames, drawing, and cooking!
 
  <img src="https://i.ytimg.com/vi/DjnjVUQgBHc/hqdefault.jpg" width="400" height="200">
