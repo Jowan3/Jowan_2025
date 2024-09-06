@@ -14,4 +14,4 @@ About Me: Jowan ELzein
 - I'm the middle child of a family of five one younger brother and an older sister
 - I plan to go to college and study game design 
 - My Hobbies are videogames, art, and cooking
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flagcolorcodes.com%2Fdownload%2Fusa&psig=AOvVaw0fweGJk4oeKBw-J8AK-kZQ&ust=1725686157088000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOj1_YXIrYgDFQAAAAAdAAAAABAE"width="10"height="10">
+<img src="https://www.flagcolorcodes.com/images/webp/usa.webp"width="10"height="10">
