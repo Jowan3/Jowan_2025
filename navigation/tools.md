@@ -1,7 +1,6 @@
 ---
-layout: tools 
-title: tools
-search_exclude: true
+layout: page 
+title: Tools
 permalink: /tools/
 ---
 
