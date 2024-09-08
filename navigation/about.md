@@ -7,7 +7,7 @@ permalink: /about/
 Name: Jowan Elzein
 
 **Born**: Fort Lewis, Washington State
-- I'm a millitary child and have lived in 6 places in and out of the US
+- I'm a millitary child and have lived in 5 places in and out of the US
 - I'm mixed raced but identify as african/arab american
 - i use to do both gymnastics and ballet for three years 
 - I moved to San Diego when I was 7 and have been loving it here
