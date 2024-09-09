@@ -5,11 +5,8 @@ description: Home Page
 hide: true
 ---
 
-My journey starts here. 2.0 Jowan
+**My journey starts here. 2.0 Jowan**
 
-
-</body>
-</html><html>
 <body>
   <nav>
     <li><a href="index.html">  </a></li>
