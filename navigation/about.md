@@ -6,7 +6,8 @@ permalink: /about/
 
 ✨Name: Jowan Elzein✨
 
-🍼**Born**: Fort Lewis, Washington State
+    🍼**Born**: Fort Lewis, Washington State
+
     🪖 - I'm a millitary child and have lived in 5 places in and out of the US
 
     🇺🇸 - I'm mixed raced but identify as african/arab american
@@ -22,7 +23,7 @@ permalink: /about/
     🖼️ - My hobbies are playing videogames, drawing, and cooking
 
 
-<img src="![alt text](httpsphotos.google.comsearch_d20170000_2017photoAF1QipO_b-Xv4_bSdAMtQqGae8DrRA3Fqo8E3buUk8A3.jpeg)" width="600" height="400">
+<img src="https://jowan3.github.io/Jowan_2025/about/![alt%20text](/Jowan_2025/navigation/httpsphotos.google.comsearch_d20170000_2017photoAF1QipO_b-Xv4_bSdAMtQqGae8DrRA3Fqo8E3buUk8A3.jpeg)" width="600" height="400">
 
  <img src="![alt text](<Screenshot 2023-05-14 at 12.58.56 PM-1.JPEG>)" width="600" height="400">
 
