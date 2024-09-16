@@ -26,3 +26,6 @@ permalink: /about/
 
 
 <img src="https://i.ytimg.com/vi/DjnjVUQgBHc/hqdefault.jpg" width="500" height="300">
+
+
+<img src="https://drive.google.com/file/d/1Ih837TLS4p9T7NdXsWTwA2k6rR5b_a_t/view?usp=sharing" width="600" height="400">
