@@ -7,7 +7,7 @@ hide: true
 
 **My journey starts here. 2.0 Jowan**
 
-
+<p style="font-family: Comfortaa">
 <div>
     <p> The button below is to Daves Hot Chicken a super yummy chicken place that i crave often. </p>
 </div>
@@ -29,7 +29,7 @@ hide: true
 </div>
 <a href="https://www.youtube.com/watch?v=shW9i6k8cB0">
 <button>SPIDEY</button>
-</a>
+</a></p>
 
 
 
