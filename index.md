@@ -9,7 +9,7 @@ hide: true
 
 
 <div>
-    <p> The button below is to Daves Hot Chicken a super yummy chicken place that i crave often.</p>
+    <p> The button below is to Daves Hot Chicken a super yummy chicken place that i crave often. </p>
 </div>
 <a herf="https://daveshotchicken.com/">
 <button>HUNGRY?</button>
@@ -17,11 +17,22 @@ hide: true
 
 
 <div>
-    <p> The button below is to the nintendo website, ive always loved games growing up.</p>
+    <p> The button below is to the nintendo website, ive always loved games growing up. </p>
 </div>
 <a herf="https://www.nintendo.com/us/?srsltid=AfmBOopAp1lkrbSCFCDzDvHEwLUnWC6_Ozmhdtcr8zHI_xV5yrJVZeGH">
-<button>MARIO</button>
+<button>NINTENDO</button>
 </a>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
