@@ -7,18 +7,29 @@ hide: true
 
 **My journey starts here. 2.0 Jowan**
 
-<body>
-  <nav>
-    <li><a href="index.html">  </a></li>
-
-    <li><a href="https://daveshotchicken.com/"> HUNGRY? </a></li>
-  </nav>
+<lr>
 <div>
-    <p> The buttone below is to Daves Hot Chicken a super yummy chicken place that i crave often.</p>
+    <p> The button below is to Daves Hot Chicken a super yummy chicken place that i crave often.</p>
 </div>
 <a herf="https://daveshotchicken.com/">
 <button>HUNGRY?</button>
 </a>
+
+<lr>
+<div>
+    <p> The button below is to the nintendo website, ive always loved games growing up.</p>
+</div>
+<a herf="https://www.nintendo.com/us/?srsltid=AfmBOopAp1lkrbSCFCDzDvHEwLUnWC6_Ozmhdtcr8zHI_xV5yrJVZeGH">
+<button>MARIO</button>
+</a>
+
+
+
+
+
+
+
+
 
 
 
