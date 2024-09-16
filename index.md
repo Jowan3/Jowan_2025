@@ -7,7 +7,7 @@ hide: true
 
 **My journey starts here. 2.0 Jowan**
 
-<lr>
+
 <div>
     <p> The button below is to Daves Hot Chicken a super yummy chicken place that i crave often.</p>
 </div>
@@ -15,7 +15,7 @@ hide: true
 <button>HUNGRY?</button>
 </a>
 
-<lr>
+
 <div>
     <p> The button below is to the nintendo website, ive always loved games growing up.</p>
 </div>
