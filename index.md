@@ -13,9 +13,13 @@ hide: true
 
     <li><a href="https://daveshotchicken.com/"> HUNGRY? </a></li>
   </nav>
+<div>
+    <p> The buttone below is to Daves Hot Chicken a super yummy chicken place that i crave often.</p>
+</div>
+<a herf="https://daveshotchicken.com/">
+<button>HUNGRY?</button>
+</a>
 
-
- <a href="https://daveshotchicken.com/" button>HUNGRY?</button></a>
 
 
 
