@@ -1,6 +1,6 @@
 ---
 layout: base
-title: Student Home 
+title: ♡Jowan's Website♡ 
 description: Home Page
 hide: true
 ---
