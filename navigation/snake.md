@@ -8,4 +8,4 @@ permalink: /snake/
 {% include nav/home.html %}
 
 ✨beginning of my snake page✨
- hello sweet people
+ 
