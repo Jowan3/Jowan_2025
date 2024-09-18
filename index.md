@@ -7,15 +7,6 @@ hide: true
 
 ⋄☁︎☼**My journey starts here. 2.0 Jowan**☁︎☼⋄
 
----
-layout: base
-title: Student Home
-description: Home Page
-image: /image/mario_animation.png
-hide: true
-
----
-
 {% include nav/home.html %}
 
 <p style="font-family: Comfortaa">
