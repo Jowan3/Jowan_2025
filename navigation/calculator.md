@@ -1,15 +1,13 @@
+---
+layout: page
+title: Calculator
+description: calculator
+permalink: /calculator/
+---
+
 {% include nav/home.html %}
 
----
-layout: post
-title: Javascript Calculator
-description: A common way to become familiar with a language is to build a calculator.  This calculator shows off button with actions.
-categories: [Javascript]
-permalink: /javascript/project/calculator
-menu: nav/javascript_project.html
-toc: true
-comments: false
----
+✨beginning of my calculator page✨
 
 <!-- 
 Hack 0: Right justify the result
