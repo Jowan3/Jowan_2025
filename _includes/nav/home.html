@@ -5,43 +5,54 @@
         <td><a href="{{site.baseurl}}/snake">Snake</a></td>
         <td>
             <a href="{{site.baseurl}}/ideas">Ideas</a>
-            <div class="submenu">
-                <ul>
-                    <li><a href="{{site.baseurl}}/ideas/idea1">Idea 1</a></li>
-                    <li><a href="{{site.baseurl}}/ideas/idea2">Idea 2</a></li>
-                    <li><a href="{{site.baseurl}}/ideas/idea3">Idea 3</a></li>
-                </ul>
-            </div>
+            <ul class="submenu">
+                <li><a href="{{site.baseurl}}/ideas/brainstorm">Brainstorm</a></li>
+                <li><a href="{{site.baseurl}}/ideas/tutorials">Tutorials</a></li>
+                <li><a href="{{site.baseurl}}/ideas/projects">Projects</a></li>
+            </ul>
         </td>
-        <td><a href="{{site.baseurl}}/home/notebooks">Notebooks</a></td>
+        <td>
+            <a href="{{site.baseurl}}/home/notebooks">Notebooks</a>
+            <ul class="submenu">
+                <li><a href="{{site.baseurl}}/home/notebooks/personal">Personal</a></li>
+                <li><a href="{{site.baseurl}}/home/notebooks/work">Work</a></li>
+                <li><a href="{{site.baseurl}}/home/notebooks/study">Study</a></li>
+            </ul>
+        </td>
         <td><a href="{{site.baseurl}}/calculator">Calculator</a></td>
+        <td><a href="{{site.baseurl}}/cookie%20clicker">Cookie Clicker</a></td>
     </tr>
 </table>
 
 <style>
+    table {
+        width: 100%;
+        background-color: #f9f9f9;
+    }
+    td {
+        padding: 10px;
+        position: relative;
+    }
     .submenu {
         display: none;
         position: absolute;
-        background-color: white;
+        background-color: #fff;
+        list-style: none;
+        padding: 0;
+        margin: 0;
         border: 1px solid #ccc;
-        z-index: 1;
     }
     td:hover .submenu {
         display: block;
     }
-    .submenu ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+    .submenu li {
+        padding: 5px 10px;
     }
-    .submenu ul li {
-        padding: 8px 12px;
-    }
-    .submenu ul li a {
+    .submenu li a {
         text-decoration: none;
-        color: black;
+        color: #333;
     }
-    .submenu ul li a:hover {
-        background-color: #f0f0f0;
+    .submenu li a:hover {
+        text-decoration: underline;
     }
 </style>
