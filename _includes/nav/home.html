@@ -8,3 +8,52 @@
      <td><a href="{{site.baseurl}}/calculator">calculator</a></td>
  </tr>
 </table>
+
+
+<table>
+    <tr>
+        <td><img src="{{site.baseurl}}/images/logo.png" height="60" title="Tools" alt=""></td>
+        <td><a href="{{site.baseurl}}/">Home</a></td>
+        <td><a href="{{site.baseurl}}/snake">Snake</a></td>
+        <td>
+            <a href="{{site.baseurl}}/ideas">Ideas</a>
+            <div class="submenu">
+                <ul>
+                    <li><a href="{{site.baseurl}}/ideas/idea1">Idea 1</a></li>
+                    <li><a href="{{site.baseurl}}/ideas/idea2">Idea 2</a></li>
+                    <li><a href="{{site.baseurl}}/ideas/idea3">Idea 3</a></li>
+                </ul>
+            </div>
+        </td>
+        <td><a href="{{site.baseurl}}/home/notebooks">Notebooks</a></td>
+        <td><a href="{{site.baseurl}}/calculator">Calculator</a></td>
+    </tr>
+</table>
+
+<style>
+    .submenu {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        z-index: 1;
+    }
+    td:hover .submenu {
+        display: block;
+    }
+    .submenu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .submenu ul li {
+        padding: 8px 12px;
+    }
+    .submenu ul li a {
+        text-decoration: none;
+        color: black;
+    }
+    .submenu ul li a:hover {
+        background-color: #f0f0f0;
+    }
+</style>
