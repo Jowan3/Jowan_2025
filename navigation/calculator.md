@@ -9,7 +9,7 @@ permalink: /calculator/
 
 ✨beginning of my calculator page✨
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
