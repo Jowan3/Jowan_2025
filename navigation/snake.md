@@ -9,7 +9,6 @@ permalink: /snake/
 
 ✨beginning of my snake page✨
  
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -58,8 +57,20 @@ permalink: /snake/
         const box = 20;
         let snake = [{ x: box * 5, y: box * 5 }];
         let direction = { x: 0, y: 0 };
-        let fruit = { x: Math.floor(Math.random() * 20) * box, y: Math.floor(Math.random() * 20) * box };
+        let fruits = [];
         let score = 0;
+
+        // Function to generate random fruit position
+        function createFruit() {
+            const x = Math.floor(Math.random() * (canvas.width / box)) * box;
+            const y = Math.floor(Math.random() * (canvas.height / box)) * box;
+            fruits.push({ x, y });
+        }
+
+        // Create initial fruits
+        for (let i = 0; i < 3; i++) {
+            createFruit();
+        }
 
         document.addEventListener("keydown", changeDirection);
 
@@ -86,22 +97,27 @@ permalink: /snake/
                 ctx.strokeRect(snake[i].x, snake[i].y, box, box);
             }
 
-            // Draw the fruit (heart)
+            // Draw the fruits (hearts)
             const heartImg = new Image();
             heartImg.src = 'https://img.icons8.com/ios/50/ffffff/heart.png'; // Heart image URL
             heartImg.onload = function () {
-                ctx.drawImage(heartImg, fruit.x, fruit.y, box, box);
+                for (const fruit of fruits) {
+                    ctx.drawImage(heartImg, fruit.x, fruit.y, box, box);
+                }
             }
 
             // Move the snake
             const head = { x: snake[0].x + direction.x * box, y: snake[0].y + direction.y * box };
-            
-            if (head.x === fruit.x && head.y === fruit.y) {
-                score++;
-                document.getElementById("score").innerText = score;
-                fruit = { x: Math.floor(Math.random() * 20) * box, y: Math.floor(Math.random() * 20) * box };
-            } else {
-                snake.pop();
+
+            // Check for fruit collision
+            for (let i = 0; i < fruits.length; i++) {
+                if (head.x === fruits[i].x && head.y === fruits[i].y) {
+                    score++;
+                    document.getElementById("score").innerText = score;
+                    fruits.splice(i, 1); // Remove the fruit that was eaten
+                    createFruit(); // Add a new fruit
+                    break;
+                }
             }
 
             snake.unshift(head);
