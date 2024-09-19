@@ -54,18 +54,19 @@ permalink: /calculator/
         button:hover {
             background-color: #e0e0e0;
         }
-        .operator {
-            background-color: #f9c74f;
+        /* Button Colors */
+        .number {
+            background-color: #d9f0ff; /* Light blue */
         }
-        .operator:hover {
-            background-color: #fcebb1;
+        .operator {
+            background-color: #e0baff; /* Light purple */
         }
         .equals {
-            background-color: #90be6d;
+            background-color: #f3f4f7; /* White */
             height: 130px;
         }
-        .equals:hover {
-            background-color: #b9fbc0;
+        .equals:hover, .number:hover, .operator:hover {
+            filter: brightness(1.1); /* Slight hover brightness */
         }
     </style>
 </head>
@@ -74,26 +75,26 @@ permalink: /calculator/
     <div class="calculator">
         <input type="text" id="display" disabled>
         <div>
-            <button onclick="clearDisplay()">C</button>
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="clearDisplay()" class="operator">C</button>
+            <button onclick="appendToDisplay('7')" class="number">7</button>
+            <button onclick="appendToDisplay('8')" class="number">8</button>
+            <button onclick="appendToDisplay('9')" class="number">9</button>
             <button class="operator" onclick="appendToDisplay('/')">/</button>
         </div>
         <div>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('4')" class="number">4</button>
+            <button onclick="appendToDisplay('5')" class="number">5</button>
+            <button onclick="appendToDisplay('6')" class="number">6</button>
             <button class="operator" onclick="appendToDisplay('*')">*</button>
         </div>
         <div>
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('1')" class="number">1</button>
+            <button onclick="appendToDisplay('2')" class="number">2</button>
+            <button onclick="appendToDisplay('3')" class="number">3</button>
             <button class="operator" onclick="appendToDisplay('-')">-</button>
         </div>
         <div>
-            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('0')" class="number">0</button>
             <button onclick="calculateResult()" class="equals">=</button>
             <button class="operator" onclick="appendToDisplay('+')">+</button>
         </div>

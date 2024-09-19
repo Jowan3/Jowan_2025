@@ -13,9 +13,13 @@ permalink: /cookie clicker/
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie Clicker</title>
+
+    <!-- Google Fonts: Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Comfortaa', cursive;
             text-align: center;
             background-color: #ffffff; /* White background */
         }
@@ -38,6 +42,7 @@ permalink: /cookie clicker/
             padding: 10px 20px;
             font-size: 1em;
             margin: 10px;
+            font-family: 'Comfortaa', cursive;
         }
     </style>
 </head>
