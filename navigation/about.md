@@ -27,7 +27,7 @@ permalink: /about/
 
 <img src="https://i.ytimg.com/vi/DjnjVUQgBHc/hqdefault.jpg" width="500" height="300">
 
-<img src="https://lh3.googleusercontent.com/pw/AP1GczNlHZXWzRhKBv37gSfB2a9y5LOPSTliG5SyQKVAR6EdQ4Cj37Dvj5uGttvJSaBfXUpVigS04WQFqvaQXjHX1HiSFhUaci0FgxAmuSYg3q6tS1srdAk=w600-h315-p-k" width="600" height="800" > 
+<img src="https://lh3.googleusercontent.com/pw/AP1GczNlHZXWzRhKBv37gSfB2a9y5LOPSTliG5SyQKVAR6EdQ4Cj37Dvj5uGttvJSaBfXUpVigS04WQFqvaQXjHX1HiSFhUaci0FgxAmuSYg3q6tS1srdAk=w600-h315-p-k" width="300" height="600" > 
 
 <img src="https://lh3.googleusercontent.com/pw/AP1GczObrrsTT8UHrSKPpuNMsHkH5_2bcMumbXUUrhSKFJRgA9hJTJUO6lPlor2acPWQQ1Sf67EfGS1I4OPhBB8PfcktLSyeglwl2u-RRLfDfuEj54sHoOo=w600-h315-p-k" width="400" height="600" >
 
