@@ -88,3 +88,16 @@ permalink: /about/
 </body>
 </html>
  
+
+ <!-- Utterances comments integration -->
+<section id="comments">
+  <h2>Comments</h2>
+  <script src="https://utteranc.es/client.js"
+          repo="Jowan3/Jowan_2025"
+          issue-term="pathname"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+  </script>
+</section>
+
