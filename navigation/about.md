@@ -36,3 +36,11 @@ permalink: /about/
 
 <img src="https://lh3.googleusercontent.com/pw/AP1GczNlHZXWzRhKBv37gSfB2a9y5LOPSTliG5SyQKVAR6EdQ4Cj37Dvj5uGttvJSaBfXUpVigS04WQFqvaQXjHX1HiSFhUaci0FgxAmuSYg3q6tS1srdAk=w600-h315-p-k" width="300" height="600" > 
  
+
+ <script src="https://utteranc.es/client.js"
+        repo="[Jowan_2025]"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
