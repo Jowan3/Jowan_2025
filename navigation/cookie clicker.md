@@ -12,62 +12,77 @@ permalink: /cookie clicker/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cute Purple Cookie Clicker</title>
+    <title>Cookie Clicker</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0e5f5;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff; /* White background */
         }
-
-        h1 {
-            color: #9b59b6;
-        }
-
-        .cookie {
-            background-image: url('https://img.icons8.com/ios/100/9b59b6/cookie.png'); /* Cookie image */
+        #cookie {
+            width: 200px;
+            height: 200px;
+            background-image: url('https://img.icons8.com/ios/200/000000/cookie.png'); /* Realistic cookie image */
             background-size: cover;
-            width: 100px;
-            height: 100px;
             border: none;
+            border-radius: 50%;
+            margin: 0 auto;
             cursor: pointer;
-            transition: transform 0.1s;
+            box-shadow: 0 0 10px #888;
         }
-
-        .cookie:hover {
-            transform: scale(1.1);
+        #counter {
+            font-size: 2em;
+            margin: 20px;
         }
-
-        .score {
-            margin-top: 20px;
-            font-size: 24px;
-            color: #9b59b6;
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Cute Purple Cookie Clicker</h1>
-    <button class="cookie" id="cookieButton"></button>
-    <div class="score">Cookies: <span id="cookieCount">0</span></div>
-    
-    <audio id="munchSound" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio> <!-- Munching sound -->
+
+    <h1>Cookie Clicker Game</h1>
+    <div id="cookie" onclick="addCookie()"></div>
+    <div id="counter">Cookies: 0</div>
+    <button onclick="buyCursor()">Buy Cursor (Cost: 10 cookies)</button>
+    <div id="cursors">Cursors: 0</div>
 
     <script>
-        let cookieCount = 0;
-        const cookieCountDisplay = document.getElementById('cookieCount');
-        const cookieButton = document.getElementById('cookieButton');
-        const munchSound = document.getElementById('munchSound');
+        let cookies = 0;
+        let cursors = 0;
 
-        cookieButton.addEventListener('click', () => {
-            cookieCount++;
-            cookieCountDisplay.innerText = cookieCount;
-            munchSound.currentTime = 0; // Reset sound
-            munchSound.play(); // Play munching sound
-        });
+        function updateCounter() {
+            document.getElementById("counter").innerText = `Cookies: ${cookies}`;
+            document.getElementById("cursors").innerText = `Cursors: ${cursors}`;
+        }
+
+        function addCookie() {
+            cookies++;
+            updateCounter();
+        }
+
+        function buyCursor() {
+            const cursorCost = 10;
+            if (cookies >= cursorCost) {
+                cookies -= cursorCost;
+                cursors++;
+                updateCounter();
+                startAutoClick();
+            } else {
+                alert("Not enough cookies!");
+            }
+        }
+
+        function startAutoClick() {
+            setInterval(() => {
+                cookies += cursors;
+                updateCounter();
+            }, 1000);
+        }
     </script>
+
 </body>
 </html>
+
