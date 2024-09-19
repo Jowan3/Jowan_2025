@@ -49,6 +49,8 @@ permalink: /cookie clicker/
     <button onclick="buyCursor()">Buy Cursor (Cost: 10 cookies)</button>
     <div id="cursors">Cursors: 0</div>
 
+    <audio id="biteSound" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio> <!-- Bite sound -->
+
     <script>
         let cookies = 0;
         let cursors = 0;
@@ -61,6 +63,7 @@ permalink: /cookie clicker/
         function addCookie() {
             cookies++;
             updateCounter();
+            playBiteSound(); // Play bite sound when clicking the cookie
         }
 
         function buyCursor() {
@@ -81,8 +84,13 @@ permalink: /cookie clicker/
                 updateCounter();
             }, 1000);
         }
+
+        function playBiteSound() {
+            const biteSound = document.getElementById("biteSound");
+            biteSound.currentTime = 0; // Reset sound
+            biteSound.play(); // Play bite sound
+        }
     </script>
 
 </body>
 </html>
-
