@@ -35,6 +35,29 @@ hide: true
 
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Spotify Playlist</title>
+</head>
+<body>
+
+    <h1>My Spotify Playlist</h1>
+    
+    <!-- Spotify Playlist Embed -->
+    <iframe 
+        src="https://open.spotify.com/embed/playlist/7aqfs76TWnBbKs6OgPDhW9?utm_source=generator" 
+        width="100%" 
+        height="380" 
+        frameBorder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+
+</body>
+</html>
+
 
 
 
