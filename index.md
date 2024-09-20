@@ -30,8 +30,8 @@ hide: true
             border-image: linear-gradient(to right, #8e44ad, #9b59b6) 1;
             border-radius: 15px;
             padding: 20px;
-            width: 200px; /* Adjusted width for smaller boxes */
-            height: 200px; /* Adjusted height for square shape */
+            width: 250px; /* Fixed width for square shape */
+            height: 250px; /* Fixed height for square shape */
             text-align: center;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -62,12 +62,22 @@ hide: true
         </a>
     </div>
 
+
+
+
+
+
     <div class="button-container">
         <p>🌸 The button below is to the Nintendo website. I've always loved Nintendo games growing up.</p>
         <a href="https://www.nintendo.com/us/?srsltid=AfmBOopAp1lkrbSCFCDzDvHEwLUnWC6_Ozmhdtcr8zHI_xV5yrJVZeGH">
             <button>NINTENDO</button>
         </a>
     </div>
+
+
+
+
+
 
     <div class="button-container">
         <p>🌸 The button below is to Spider-Man: Across the Spider-Verse, one of my favorite movies.</p>
@@ -78,7 +88,6 @@ hide: true
 
 </body>
 </html>
-
 
 
 
