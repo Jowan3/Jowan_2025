@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Kitties
-description: kitties
-permalink: /kitties/
+title: Cute Cats
+description: the cutest cats
+permalink: /cute cats/
 ---
 {% include nav/home.html %}
 
