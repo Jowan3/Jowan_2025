@@ -13,176 +13,163 @@ permalink: /snake/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cute Purple Snake Game</title>
-    <!-- Include Comfortaa font -->
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <title>Snake Game</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0e5f5;
-            font-family: 'Comfortaa', cursive; /* Use Comfortaa font */
-            margin: 0;
-            overflow: hidden; /* Prevent page scroll */
+            background-color: #f0f0f0;
         }
-
-        .game-container {
-            border: 5px solid #9b59b6;
-            border-radius: 10px;
-            padding: 10px;
-            background-color: #ffffff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            text-align: center;
+        .wrap {
+            margin-left: auto;
+            margin-right: auto;
         }
 
         canvas {
-            background-color: #e0d6e8;
+            display: block;
+            border-style: solid;
+            border-width: 10px;
+            border-color: #800080; /* Purple border */
+            margin: 20px auto;
         }
 
-        .score {
+        canvas:focus {
+            outline: none;
+        }
+
+        #menu {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #score_value {
             font-size: 24px;
-            color: #9b59b6;
-        }
-
-        button {
-            font-family: 'Comfortaa', cursive;
-            background-color: #9b59b6;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        button:hover {
-            background-color: #8e44ad;
         }
     </style>
 </head>
 <body>
-    <div class="game-container">
-        <canvas id="gameCanvas" width="400" height="400"></canvas>
-        <div class="score">Score: <span id="score">0</span></div>
-        <button id="restartBtn" style="display: none;" onclick="restartGame()">Play Again</button>
+    <div class="container">
+        <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+            <p class="fs-4">Snake Score: <span id="score_value">0</span></p>
+        </header>
+        <canvas id="snake" class="wrap" width="320" height="320" tabindex="1"></canvas>
     </div>
+
     <script>
-        const canvas = document.getElementById("gameCanvas");
-        const ctx = canvas.getContext("2d");
-        const box = 20;
-        let snake = [{ x: box * 5, y: box * 5 }];
-        let direction = { x: 0, y: 0 };
-        let fruits = [];
-        let score = 0;
-        let gameInterval;
-        const restartBtn = document.getElementById("restartBtn");
+        (function() {
+            const canvas = document.getElementById("snake");
+            const ctx = canvas.getContext("2d");
+            const BLOCK = 10;  // Size of each snake block
 
-        // Function to generate random fruit position
-        function createFruit() {
-            const x = Math.floor(Math.random() * (canvas.width / box)) * box;
-            const y = Math.floor(Math.random() * (canvas.height / box)) * box;
-            fruits.push({ x, y });
-        }
+            let snake = [{ x: 0, y: 15 }];  // Initial snake
+            let snake_dir = 1;  // Initial direction (1 is right)
+            let snake_next_dir = 1;
+            let food = { x: 0, y: 0 };
+            let score = 0;
 
-        // Disable default arrow key behavior (prevent page scrolling)
-        window.addEventListener("keydown", function(event) {
-            if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)) {
-                event.preventDefault();
-            }
-        });
+            // Start the game
+            window.onload = function() {
+                newGame();
+            };
 
-        // Create initial fruits
-        for (let i = 0; i < 3; i++) {
-            createFruit();
-        }
-
-        document.addEventListener("keydown", changeDirection);
-
-        function changeDirection(event) {
-            if (event.key === "ArrowUp" && direction.y === 0) {
-                direction = { x: 0, y: -1 };
-            } else if (event.key === "ArrowDown" && direction.y === 0) {
-                direction = { x: 0, y: 1 };
-            } else if (event.key === "ArrowLeft" && direction.x === 0) {
-                direction = { x: -1, y: 0 };
-            } else if (event.key === "ArrowRight" && direction.x === 0) {
-                direction = { x: 1, y: 0 };
-            }
-        }
-
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw the snake
-            for (let i = 0; i < snake.length; i++) {
-                ctx.fillStyle = i === 0 ? "#8e44ad" : "#9b59b6"; // Head is purple, body is a lighter purple
-                ctx.fillRect(snake[i].x, snake[i].y, box, box);
-                ctx.strokeStyle = "#6c3483";
-                ctx.strokeRect(snake[i].x, snake[i].y, box, box);
+            function newGame() {
+                // Reset snake, food, and score
+                snake = [{ x: 0, y: 15 }];
+                snake_dir = 1;
+                snake_next_dir = 1;
+                score = 0;
+                document.getElementById("score_value").textContent = score;
+                addFood();
+                mainLoop();
             }
 
-            // Draw the fruits (default blocks)
-            ctx.fillStyle = "#e74c3c"; // Red color for the fruit
-            for (const fruit of fruits) {
-                ctx.fillRect(fruit.x, fruit.y, box, box);
-                ctx.strokeRect(fruit.x, fruit.y, box, box);
+            function mainLoop() {
+                moveSnake();
+                renderGame();
+                setTimeout(mainLoop, 100);
             }
 
-            // Move the snake
-            const head = { x: snake[0].x + direction.x * box, y: snake[0].y + direction.y * box };
+            function moveSnake() {
+                let head = snake[0];
+                let newHead = {
+                    x: head.x + (snake_dir === 1 ? 1 : snake_dir === 3 ? -1 : 0),
+                    y: head.y + (snake_dir === 0 ? -1 : snake_dir === 2 ? 1 : 0)
+                };
 
-            // Check for fruit collision
-            for (let i = 0; i < fruits.length; i++) {
-                if (head.x === fruits[i].x && head.y === fruits[i].y) {
+                snake.unshift(newHead);
+                snake.pop();
+
+                if (checkCollision(newHead.x, newHead.y, food.x, food.y)) {
+                    snake.push({}); // Add length to snake
                     score++;
-                    document.getElementById("score").innerText = score;
-                    fruits.splice(i, 1); // Remove the fruit that was eaten
-                    createFruit(); // Add a new fruit
-                    break;
+                    document.getElementById("score_value").textContent = score;
+                    addFood();
                 }
             }
 
-            snake.unshift(head);
+            function renderGame() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Game over conditions
-            if (head.x < 0 || head.x >= canvas.width || head.y < 0 || head.y >= canvas.height || collision(head, snake)) {
-                clearInterval(gameInterval);
-                alert("Game Over! Your score: " + score);
-                restartBtn.style.display = "block"; // Show the replay button
+                // Draw the snake
+                ctx.fillStyle = "#800080";  // Purple snake
+                snake.forEach(part => {
+                    ctx.fillRect(part.x * BLOCK, part.y * BLOCK, BLOCK, BLOCK);
+                });
+
+                // Draw the food (white heart with light blue outline)
+                drawHeart(food.x, food.y);
             }
-        }
 
-        function collision(head, array) {
-            for (let i = 1; i < array.length; i++) {
-                if (head.x === array[i].x && head.y === array[i].y) {
-                    return true;
+            function addFood() {
+                food.x = Math.floor(Math.random() * (canvas.width / BLOCK));
+                food.y = Math.floor(Math.random() * (canvas.height / BLOCK));
+            }
+
+            function drawHeart(x, y) {
+                const centerX = x * BLOCK + BLOCK / 2;
+                const centerY = y * BLOCK + BLOCK / 2;
+                const size = BLOCK / 2;
+
+                ctx.save();
+                ctx.translate(centerX, centerY);
+
+                // Draw the outline (light blue)
+                ctx.beginPath();
+                ctx.strokeStyle = "#ADD8E6";  // Light blue outline
+                ctx.lineWidth = 2;
+                ctx.moveTo(0, 0);
+                ctx.arc(-size / 2, -size / 4, size / 2, 0, Math.PI, true);
+                ctx.arc(size / 2, -size / 4, size / 2, 0, Math.PI, true);
+                ctx.lineTo(0, size);
+                ctx.stroke();
+                ctx.closePath();
+
+                // Draw the heart (white fill)
+                ctx.beginPath();
+                ctx.fillStyle = "#FFFFFF";  // White fill
+                ctx.moveTo(0, 0);
+                ctx.arc(-size / 2, -size / 4, size / 2, 0, Math.PI, true);
+                ctx.arc(size / 2, -size / 4, size / 2, 0, Math.PI, true);
+                ctx.lineTo(0, size);
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.restore();
+            }
+
+            function checkCollision(x1, y1, x2, y2) {
+                return x1 === x2 && y1 === y2;
+            }
+
+            window.addEventListener("keydown", function(evt) {
+                switch (evt.keyCode) {
+                    case 37: if (snake_dir !== 1) snake_next_dir = 3; break;  // Left arrow
+                    case 38: if (snake_dir !== 2) snake_next_dir = 0; break;  // Up arrow
+                    case 39: if (snake_dir !== 3) snake_next_dir = 1; break;  // Right arrow
+                    case 40: if (snake_dir !== 0) snake_next_dir = 2; break;  // Down arrow
                 }
-            }
-            return false;
-        }
-
-        function startGame() {
-            score = 0;
-            snake = [{ x: box * 5, y: box * 5 }];
-            direction = { x: 0, y: 0 };
-            fruits = [];
-            document.getElementById("score").innerText = score;
-            restartBtn.style.display = "none";
-            for (let i = 0; i < 3; i++) {
-                createFruit();
-            }
-            gameInterval = setInterval(draw, 100);
-        }
-
-        function restartGame() {
-            startGame(); // Reset and start the game again
-        }
-
-        // Start the game when the page loads
-        window.onload = startGame;
+                snake_dir = snake_next_dir;
+            });
+        })();
     </script>
 </body>
 </html>
