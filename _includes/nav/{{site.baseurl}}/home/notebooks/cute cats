@@ -4,6 +4,9 @@ title: Kitties
 description: kitties
 permalink: /kitties/
 ---
+{% include nav/home.html %}
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">

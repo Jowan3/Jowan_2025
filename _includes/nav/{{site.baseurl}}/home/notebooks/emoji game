@@ -4,6 +4,8 @@ title: Emoji Game
 description: Guess the movie by the emoji
 permalink: /emoji game/
 ---
+{% include nav/home.html %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
