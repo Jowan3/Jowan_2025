@@ -1,12 +1,3 @@
----
-layout: page
-title: Emoji
-description: guess the movie emoji from emojis
-permalink: /emoji/
----
-
-{% include nav/home.html %}
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
