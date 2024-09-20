@@ -99,14 +99,14 @@ hide: true
 
 
 
-</div>
+
 <a href="cute-cats.html">
 <button>ᓚᘏᗢ</button>
 </a>
 
-</div>
+
 <a href="emojis.html">
-<button>∧,,,∧
-(  ̳• · • ̳)
-/    づ♡ </button>
+<button> ∧,,,∧
+      (  ̳• · • ̳)
+      /    づ♡ </button>
 </a>
