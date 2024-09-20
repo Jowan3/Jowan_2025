@@ -124,14 +124,12 @@ permalink: /snake/
                 ctx.strokeRect(snake[i].x, snake[i].y, box, box);
             }
 
-            // Draw the fruits (hearts)
-            const heartImg = new Image();
-            heartImg.src = 'https://img.icons8.com/ios/50/ffffff/heart.png'; // Heart image URL
-            heartImg.onload = function () {
-                for (const fruit of fruits) {
-                    ctx.drawImage(heartImg, fruit.x, fruit.y, box, box);
-                }
-            };
+            // Draw the fruits (default blocks)
+            ctx.fillStyle = "#e74c3c"; // Red color for the fruit
+            for (const fruit of fruits) {
+                ctx.fillRect(fruit.x, fruit.y, box, box);
+                ctx.strokeRect(fruit.x, fruit.y, box, box);
+            }
 
             // Move the snake
             const head = { x: snake[0].x + direction.x * box, y: snake[0].y + direction.y * box };
