@@ -30,8 +30,8 @@ hide: true
             border-image: linear-gradient(to right, #8e44ad, #9b59b6) 1;
             border-radius: 15px;
             padding: 20px;
-            width: 250px; /* Fixed width for square shape */
-            height: 250px; /* Fixed height for square shape */
+            width: 200px; /* Adjusted width for smaller boxes */
+            height: 200px; /* Adjusted height for square shape */
             text-align: center;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -78,6 +78,7 @@ hide: true
 
 </body>
 </html>
+
 
 
 
