@@ -9,29 +9,76 @@ hide: true
 
 {% include nav/home.html %}
 
-<p style="font-family: Comfortaa">
-<div>
-    <p> 🌸The button below is to Daves Hot Chicken a super yummy chicken place that i crave often. </p>
-</div>
-<a href="https://daveshotchicken.com/">
-<button>HUNGRY?</button>
-</a>
 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Grid</title>
+    <style>
+        body {
+            font-family: 'Comfortaa', sans-serif;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .button-container {
+            border: 5px solid;
+            border-image: linear-gradient(to right, #8e44ad, #9b59b6) 1;
+            border-radius: 15px;
+            padding: 20px;
+            width: 250px; /* Fixed width for square shape */
+            height: 250px; /* Fixed height for square shape */
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space elements evenly */
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #9b59b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #8e44ad;
+        }
+    </style>
+</head>
+<body>
 
-<div>
-    <p> 🌸The button below is to the nintendo website, I've always loved nintendo games growing up. </p>
-</div>
-<a href="https://www.nintendo.com/us/?srsltid=AfmBOopAp1lkrbSCFCDzDvHEwLUnWC6_Ozmhdtcr8zHI_xV5yrJVZeGH">
-<button>NINTENDO</button>
-</a>
+    <div class="button-container">
+        <p>🌸 The button below is to Dave's Hot Chicken, a super yummy chicken place that I crave often.</p>
+        <a href="https://daveshotchicken.com/">
+            <button>HUNGRY?</button>
+        </a>
+    </div>
 
+    <div class="button-container">
+        <p>🌸 The button below is to the Nintendo website. I've always loved Nintendo games growing up.</p>
+        <a href="https://www.nintendo.com/us/?srsltid=AfmBOopAp1lkrbSCFCDzDvHEwLUnWC6_Ozmhdtcr8zHI_xV5yrJVZeGH">
+            <button>NINTENDO</button>
+        </a>
+    </div>
 
-<div>
-    <p> 🌸The button below is to the spiderman across the spiderverse one of my favorite movies. </p>
-</div>
-<a href="https://www.youtube.com/watch?v=shW9i6k8cB0">
-<button>SPIDEY</button>
-</a></p>
+    <div class="button-container">
+        <p>🌸 The button below is to Spider-Man: Across the Spider-Verse, one of my favorite movies.</p>
+        <a href="https://www.youtube.com/watch?v=shW9i6k8cB0">
+            <button>SPIDEY</button>
+        </a>
+    </div>
+
+</body>
+</html>
+
 
 
 
