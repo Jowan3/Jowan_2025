@@ -13,8 +13,9 @@ permalink: /snake/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cute Purple Snake Game - 8-Bit</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Cute Purple Snake Game</title>
+    <!-- Include Comfortaa font -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -22,7 +23,9 @@ permalink: /snake/
             align-items: center;
             height: 100vh;
             background-color: #f0e5f5;
-            font-family: 'Press Start 2P', cursive; /* 8-bit font */
+            font-family: 'Comfortaa', cursive; /* Use Comfortaa font */
+            margin: 0;
+            overflow: hidden; /* Prevent page scroll */
         }
 
         .game-container {
@@ -31,18 +34,32 @@ permalink: /snake/
             padding: 10px;
             background-color: #ffffff;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
         }
 
         canvas {
             background-color: #e0d6e8;
-            image-rendering: pixelated; /* Ensure pixelated style */
         }
 
         .score {
-            text-align: center;
             font-size: 24px;
-            margin-top: 10px;
             color: #9b59b6;
+        }
+
+        button {
+            font-family: 'Comfortaa', cursive;
+            background-color: #9b59b6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #8e44ad;
         }
     </style>
 </head>
@@ -50,6 +67,7 @@ permalink: /snake/
     <div class="game-container">
         <canvas id="gameCanvas" width="400" height="400"></canvas>
         <div class="score">Score: <span id="score">0</span></div>
+        <button id="restartBtn" style="display: none;" onclick="restartGame()">Play Again</button>
     </div>
     <script>
         const canvas = document.getElementById("gameCanvas");
@@ -59,6 +77,8 @@ permalink: /snake/
         let direction = { x: 0, y: 0 };
         let fruits = [];
         let score = 0;
+        let gameInterval;
+        const restartBtn = document.getElementById("restartBtn");
 
         // Function to generate random fruit position
         function createFruit() {
@@ -66,6 +86,13 @@ permalink: /snake/
             const y = Math.floor(Math.random() * (canvas.height / box)) * box;
             fruits.push({ x, y });
         }
+
+        // Disable default arrow key behavior (prevent page scrolling)
+        window.addEventListener("keydown", function(event) {
+            if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)) {
+                event.preventDefault();
+            }
+        });
 
         // Create initial fruits
         for (let i = 0; i < 3; i++) {
@@ -88,7 +115,7 @@ permalink: /snake/
 
         function draw() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
+
             // Draw the snake
             for (let i = 0; i < snake.length; i++) {
                 ctx.fillStyle = i === 0 ? "#8e44ad" : "#9b59b6"; // Head is purple, body is a lighter purple
@@ -104,7 +131,7 @@ permalink: /snake/
                 for (const fruit of fruits) {
                     ctx.drawImage(heartImg, fruit.x, fruit.y, box, box);
                 }
-            }
+            };
 
             // Move the snake
             const head = { x: snake[0].x + direction.x * box, y: snake[0].y + direction.y * box };
@@ -124,8 +151,9 @@ permalink: /snake/
 
             // Game over conditions
             if (head.x < 0 || head.x >= canvas.width || head.y < 0 || head.y >= canvas.height || collision(head, snake)) {
-                clearInterval(game);
+                clearInterval(gameInterval);
                 alert("Game Over! Your score: " + score);
+                restartBtn.style.display = "block"; // Show the replay button
             }
         }
 
@@ -138,7 +166,25 @@ permalink: /snake/
             return false;
         }
 
-        const game = setInterval(draw, 100);
+        function startGame() {
+            score = 0;
+            snake = [{ x: box * 5, y: box * 5 }];
+            direction = { x: 0, y: 0 };
+            fruits = [];
+            document.getElementById("score").innerText = score;
+            restartBtn.style.display = "none";
+            for (let i = 0; i < 3; i++) {
+                createFruit();
+            }
+            gameInterval = setInterval(draw, 100);
+        }
+
+        function restartGame() {
+            startGame(); // Reset and start the game again
+        }
+
+        // Start the game when the page loads
+        window.onload = startGame;
     </script>
 </body>
 </html>
