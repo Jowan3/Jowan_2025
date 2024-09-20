@@ -1,4 +1,9 @@
-
+---
+layout: page
+title: Kitties
+description: kitties
+permalink: /kitties/
+---
 <html lang="en">
 <head>
     <meta charset="UTF-8">

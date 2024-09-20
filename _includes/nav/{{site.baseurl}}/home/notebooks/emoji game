@@ -1,3 +1,9 @@
+---
+layout: page
+title: Emoji Game
+description: Guess the movie by the emoji
+permalink: /emoji game/
+---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
