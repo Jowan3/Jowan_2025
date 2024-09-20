@@ -94,3 +94,19 @@ hide: true
 
 
 <img src="https://i.pinimg.com/originals/25/e3/f7/25e3f70fbcd49d9798d8f2f6e43fa1c4.gif" width="400" height="400">
+
+
+
+
+
+</div>
+<a href="cute-cats.html">
+<button>ᓚᘏᗢ</button>
+</a>
+
+</div>
+<a href="emojis.html">
+<button>∧,,,∧
+(  ̳• · • ̳)
+/    づ♡ </button>
+</a>
