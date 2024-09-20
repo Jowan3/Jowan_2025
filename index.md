@@ -100,12 +100,12 @@ hide: true
 
 
 
-<a href="cute-cats.html">
+<a href="cute-cats.md">
 <button>ᓚᘏᗢ</button>
 </a>
 
 
-<a href="emojis.html">
+<a href="emojis.md">
 <button> ∧,,,∧
       (  ̳• · • ̳)
       /    づ♡ </button>
