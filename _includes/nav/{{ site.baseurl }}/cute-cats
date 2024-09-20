@@ -5,9 +5,7 @@ description: the cutest cats
 permalink: /cute-cats/
 ---
 
-
 {% include nav/home.html %}
-
 
 <html lang="en">
 <head>
