@@ -25,4 +25,5 @@ header_pages:
   - navigation/about.md
   - README4YML.md
   - navigation/tools.md
-  - navigation/javascript.ipynb
+  - navigation/kitties.md
+  - navigation/emoji game.md
