@@ -93,13 +93,13 @@ permalink: /kittes/
 <body>
 
 <div class="carousel">
-    <img src="https://placekitten.com/600/400" class="active" alt="Cute Cat 1">
-    <img src="https://placekitten.com/601/400" alt="Cute Cat 2">
-    <img src="https://placekitten.com/602/400" alt="Cute Cat 3">
-    <img src="https://placekitten.com/603/400" alt="Cute Cat 4">
-    <img src="https://placekitten.com/604/400" alt="Cute Cat 5">
-    <img src="https://placekitten.com/605/400" alt="Cute Cat 6">
-    <img src="https://placekitten.com/606/400" alt="Cute Cat 7">
+    <img src="https://images.unsplash.com/photo-1592194996308-7b43878e242e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGNhdHxlbnwwfHx8fDE2NDI5ODk2Nzc&ixlib=rb-1.2.1&q=80&w=400" class="active" alt="Cute Cat 1">
+    <img src="https://images.unsplash.com/photo-1560114927-813fc3c8e0e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIxfHxjYXR8ZW58MHx8fHwxNjQyOTg5Njc3&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 2">
+    <img src="https://images.unsplash.com/photo-1583267746371-9aab6f3e5e99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE3fHxjYXR8ZW58MHx8fHwxNjQyOTg5Njc3&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 3">
+    <img src="https://images.unsplash.com/photo-1555685812-4b743f4b8b36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGtpdHRlbnxlbnwwfHx8fDE2NDI5ODk2Nzc&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 4">
+    <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGtpdHRlbnxlbnwwfHx8fDE2NDI5ODk2Nzc&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 5">
+    <img src="https://images.unsplash.com/photo-1541599540903-216a46ca5a77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGNhdHxlbnwwfHx8fDE2NDI5ODk2Nzc&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 6">
+    <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDI2fHxjYXR8ZW58MHx8fHwxNjQyOTg5Njc3&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 7">
 
     <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
     <button class="next" onclick="changeSlide(1)">&#10095;</button>

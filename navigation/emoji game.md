@@ -85,12 +85,12 @@ permalink: /emoji game/
 
     <script>
         const movies = [
-            { emojis: '🦁👑', name: 'The Lion King' },
+            { emojis: '🦁👑', name: 'Lion King' },
             { emojis: '🧑‍🚀🚀🌕', name: 'Apollo 13' },
             { emojis: '🦈🌊', name: 'Jaws' },
             { emojis: '👸❄️', name: 'Frozen' },
             { emojis: '🧙‍♂️🧹⚡', name: 'Harry Potter' },
-            { emojis: '🤖👦', name: 'The Terminator' }
+            { emojis: '🤖👦', name: 'Terminator' }
         ];
 
         let currentMovieIndex = 0;
