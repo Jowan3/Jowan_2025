@@ -2,7 +2,7 @@
 layout: page
 title: Cute Cats
 description: the cutest cats
-permalink: /cute-cats/
+permalink: /cats/
 ---
 
 {% include nav/home.html %}
