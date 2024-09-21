@@ -1,12 +1,9 @@
 ---
 layout: page 
 title: kitties
-search_exclude: true
 permalink: /kittes/
 ---
 
-
-{% include nav/home.html %}
 
 <html lang="en">
 <head>
