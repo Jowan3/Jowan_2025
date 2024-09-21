@@ -98,15 +98,13 @@ hide: true
 
 
 
+**~GAMES~**
 
-
-<a href="cute-cats.md">
+<a href="kitties.md">
 <button>ᓚᘏᗢ</button>
 </a>
 
 
-<a href="emojis.md">
-<button> ∧,,,∧
-      (  ̳• · • ̳)
-      /    づ♡ </button>
+<a href="emoji game.md">
+<button>♡</button>
 </a>
