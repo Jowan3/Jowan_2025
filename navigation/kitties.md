@@ -9,143 +9,40 @@ permalink: /kittes/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cutest Cats Carousel</title>
+    <title>Pat the Cat</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f5f5f5;
+            background-color: #f0f8ff;
+            flex-direction: column;
         }
-
-        .carousel {
-            position: relative;
-            max-width: 600px;
-            max-height: 400px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .carousel img {
-            width: 100%;
-            height: 100%;
-            display: none;
-        }
-
-        .carousel img.active {
-            display: block;
-        }
-
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            padding: 10px;
-            border: none;
+        img {
+            width: 300px; /* Adjust the size of the cat image */
             cursor: pointer;
-            font-size: 18px;
-            border-radius: 50%;
         }
-
-        .prev {
-            left: 10px;
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
         }
-
-        .next {
-            right: 10px;
-        }
-
-        .dots {
-            text-align: center;
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 10px;
-            width: 10px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .dot.active {
-            background-color: #717171;
-        }
-
     </style>
 </head>
 <body>
 
-<div class="carousel">
-    <img src="https://images.unsplash.com/photo-1592194996308-7b43878e242e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGNhdHxlbnwwfHx8fDE2NDI5ODk2Nzc&ixlib=rb-1.2.1&q=80&w=400" class="active" alt="Cute Cat 1">
-    <img src="https://images.unsplash.com/photo-1560114927-813fc3c8e0e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIxfHxjYXR8ZW58MHx8fHwxNjQyOTg5Njc3&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 2">
-    <img src="https://images.unsplash.com/photo-1583267746371-9aab6f3e5e99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE3fHxjYXR8ZW58MHx8fHwxNjQyOTg5Njc3&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 3">
-    <img src="https://images.unsplash.com/photo-1555685812-4b743f4b8b36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGtpdHRlbnxlbnwwfHx8fDE2NDI5ODk2Nzc&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 4">
-    <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGtpdHRlbnxlbnwwfHx8fDE2NDI5ODk2Nzc&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 5">
-    <img src="https://images.unsplash.com/photo-1541599540903-216a46ca5a77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGNhdHxlbnwwfHx8fDE2NDI5ODk2Nzc&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 6">
-    <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDI2fHxjYXR8ZW58MHx8fHwxNjQyOTg5Njc3&ixlib=rb-1.2.1&q=80&w=400" alt="Cute Cat 7">
+    <img src="https://placekitten.com/300/300" alt="Cute Cat" id="cat">
+    <div id="message"></div>
 
-    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    <script>
+        const cat = document.getElementById('cat');
+        const messageDiv = document.getElementById('message');
 
-    <div class="dots">
-        <span class="dot active" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-    </div>
-</div>
-
-<script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function changeSlide(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        let slides = document.querySelectorAll('.carousel img');
-        let dots = document.querySelectorAll('.dot');
-        
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        
-        slides.forEach(slide => slide.style.display = 'none');
-        dots.forEach(dot => dot.classList.remove('active'));
-        
-        slides[slideIndex-1].style.display = 'block';  
-        dots[slideIndex-1].classList.add('active');
-    }
-
-    // Optional: Auto slide every 5 seconds
-    setInterval(function() {
-        changeSlide(1);
-    }, 5000);
-</script>
+        cat.addEventListener('click', () => {
+            messageDiv.textContent = "You patted the cat! 😺";
+        });
+    </script>
 
 </body>
 </html>
