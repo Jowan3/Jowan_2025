@@ -1,3 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu with Table</title>
+    <style>
+        .dropbtn {
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #282a36; /* Dracula theme code cell background */
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #6272a4; /* Lighter Dracula theme color */
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td {
+            padding: 10px;
+            background-color: #44475a; /* Dark Dracula theme background for table cells */
+            color: white;
+        }
+
+        td a {
+            color: #f8f8f2; /* Light color for links */
+            text-decoration: none;
+        }
+
+        td a:hover {
+            color: #50fa7b; /* Light green hover effect */
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #282a36;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .submenu li a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: white;
+        }
+
+        .submenu li a:hover {
+            background-color: #6272a4;
+        }
+
+        td:hover .submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
 <table>
     <tr>
         <td><a href="{{site.baseurl}}/">Home</a></td>
@@ -13,9 +104,12 @@
         </td>               
         <td><a href="{{site.baseurl}}/calculator">Calculator</a></td>
         <td><a href="{{site.baseurl}}/cookie%20clicker">Cookie Clicker</a></td>
-        <td><a href="{{site.baseurl}}/javascript">javascript</a></td>
+        <td><a href="{{site.baseurl}}/javascript">Javascript</a></td>
     </tr>
 </table>
+
+</body>
+</html>
 
 <style>
     table {
