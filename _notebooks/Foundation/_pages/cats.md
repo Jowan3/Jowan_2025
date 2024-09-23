@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Cute Cats
+title: Cats
 description: the cutest cats
 permalink: /cats/
 ---
