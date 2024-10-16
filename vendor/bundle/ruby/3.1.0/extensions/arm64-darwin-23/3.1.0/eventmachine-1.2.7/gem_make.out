@@ -1,0 +1,17 @@
+current directory: /Users/ayahelzein/nighthawk/student_2025/Jowan_2025/vendor/bundle/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/Users/ayahelzein/.rbenv/versions/3.1.4/bin/ruby -I /Users/ayahelzein/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/ayahelzein/nighthawk/student_2025/Jowan_2025/vendor/bundle/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20241016-52307-kac1ie sitelibdir\=./.gem.20241016-52307-kac1ie clean
+
+current directory: /Users/ayahelzein/nighthawk/student_2025/Jowan_2025/vendor/bundle/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20241016-52307-kac1ie sitelibdir\=./.gem.20241016-52307-kac1ie
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.1'
+
+current directory: /Users/ayahelzein/nighthawk/student_2025/Jowan_2025/vendor/bundle/ruby/3.1.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20241016-52307-kac1ie sitelibdir\=./.gem.20241016-52307-kac1ie install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20241016-52307-kac1ie
