@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,31 +13,33 @@
         }
         
         .dropdown {
-            position: relative;
-            display: inline-block;
-            z-index: 1;
-        }
+    position: relative;
+    display: inline-block;
+    z-index: 1;}
         
-        .dropdown-content {
+        .submenu {
             display: none;
             position: absolute;
-            background-color: #ffffff; /* Dracula theme code cell background */
+            background-color: #282a36;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        
-        .dropdown-content a {
-            color: white;
+
+        .submenu li a {
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+            color: #f8f8f2; /* Light text color for readability */
         }
-        
-        .dropdown-content a:hover {
-            background-color: #ffffff; /* Lighter Dracula theme color */
+
+        .submenu li a:hover {
+            background-color: #6272a4;
         }
-        
-        .dropdown:hover .dropdown-content {
+
+        .dropdown:hover .submenu {
             display: block;
         }
 
@@ -48,42 +51,18 @@
 
         td {
             padding: 10px;
-            background-color: #ffffff; /* Dark Dracula theme background for table cells */
-            color: white;
+            background-color: #44475a; /* Dark background for Dracula theme */
+            color: #f8f8f2;
+            position: relative;
         }
 
         td a {
-            color: #d39cda; /* Light color for links */
+            color: #8be9fd; /* Bright cyan for links */
             text-decoration: none;
         }
 
         td a:hover {
-            color: #d2a0da; /* Light green hover effect */
-        }
-
-        .submenu {
-            display: none;
-            position: absolute;
-            background-color: #282a36;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .submenu li a {
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            color: white;
-        }
-
-        .submenu li a:hover {
-            background-color: #6272a4;
-        }
-
-        td:hover .submenu {
-            display: block;
+            color: #50fa7b; /* Bright green hover color */
         }
     </style>
 </head>
@@ -95,12 +74,14 @@
         <td><a href="{{site.baseurl}}/snake">Snake</a></td>
         <td><a href="{{site.baseurl}}/ideas">Ideas</a></td>
         <td>
-            <a href="{{site.baseurl}}nav/home.html">Notebooks</a>
-            <ul class="submenu">
-                <li><a href="{{site.baseurl}}/home/notebooks/personal">Personal</a></li>
-                <li><a href="{{site.baseurl}}/cats">Cats</a></li>
-                <li><a href="{{site.baseurl}}/emojis">Emojis</a></li>
-            </ul>
+            <div class="dropdown">
+                <a href="{{site.baseurl}}/nav/home.html">Notebooks</a>
+                <ul class="submenu">
+                    <li><a href="{{site.baseurl}}/home/notebooks/personal">Personal</a></li>
+                    <li><a href="{{site.baseurl}}/cats">Cute Cats</a></li>
+                    <li><a href="{{site.baseurl}}/emoji%20game">Emojis</a></li>
+                </ul>
+            </div>
         </td>               
         <td><a href="{{site.baseurl}}/calculator">Calculator</a></td>
         <td><a href="{{site.baseurl}}/cookie%20clicker">Cookie Clicker</a></td>
@@ -110,36 +91,3 @@
 
 </body>
 </html>
-
-<style>
-    table {
-        width: 100%;
-        background-color: #f9f9f9;
-    }
-    td {
-        padding: 10px;
-        position: relative;
-    }
-    .submenu {
-        display: none;
-        position: absolute;
-        background-color: #fff;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        border: 1px solid #ccc;
-    }
-    td:hover .submenu {
-        display: block;
-    }
-    .submenu li {
-        padding: 5px 10px;
-    }
-    .submenu li a {
-        text-decoration: none;
-        color: #333;
-    }
-    .submenu li a:hover {
-        text-decoration: underline;
-    }
-</style>
