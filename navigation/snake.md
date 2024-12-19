@@ -9,7 +9,7 @@ permalink: /snake/
 
 ✨beginning of my snake page✨
  
- <style>
+<style>
 
     body{
     }
@@ -73,10 +73,10 @@ permalink: /snake/
     }
 </style>
 
-
+<h2>Snake</h2>
 <div class="container">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
-        <p class="fs-4">Snake score: <span id="score_value">0</span></p>
+        <p class="fs-4">Score: <span id="score_value">0</span></p>
     </header>
     <div class="container bg-secondary" style="text-align:center;">
         <!-- Main Menu -->
